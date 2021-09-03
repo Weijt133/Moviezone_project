@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Log-in Form</h2>
+<p class='centre'>Remember you may only rent/purchase five (5) movies via the on-line system</p>
+    <form method="post" id="login" name="login" enctype='multipart/form-data'>
+        <fieldset>
+            <legend>Login</legend>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" size = "39" maxlength = "10" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" size = "40" maxlength = "10" required>
+            </div>
+        </fieldset>
+        <div id="formbuttons">
+            <input type="button" type="button" value = "Login"  onclick="userlogin_btnClicked();" />
+        </div>
+    </form>
+</body>
+</html>

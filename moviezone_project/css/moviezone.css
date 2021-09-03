@@ -1,0 +1,392 @@
+/*-----------------------------------------------------*/
+
+header h1 {
+    /*display:inline-block;*/
+    /*margin-left: 100px;*/
+    color: #ffc300;
+    text-shadow: 2px 2px #38280f;
+    padding-top: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+
+#menutop div {
+    margin:0 auto;
+    padding:28px 0 0;
+    position:relative;
+    width:960px;
+}
+#menutop div a#logo {
+    display:block;
+    height:129px;
+    margin:0 auto;
+    width:587px;
+}
+#menutop div ul {
+    height:100px;
+    left:160px;
+    list-style:none;
+    margin:0;
+    overflow:hidden;
+    padding:0;
+    position:absolute;
+    top:-20px;
+}
+#menutop div ul li:first-child {
+    margin:0;
+}
+#menutop div ul li {
+    float:left;
+    height:66px;
+    margin:0 0 0 65px;
+    text-align:left;
+    position:relative;
+}
+#menutop div ul li a {
+    color:#000;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:18px;
+    line-height:24px;
+    font-weight: bold;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+#menutop div ul li.currentpage a, #menutop div ul li a:hover {
+    color:#af0000;
+}
+#menutop div ul li ul {
+    height:auto;
+    left:-99999px;
+    overflow:hidden;
+    position:absolute;
+    top:37px;
+    width:115px;
+}
+#menutop div ul li:hover ul {
+    left:0;
+    top:37px;
+}
+#menutop div ul li ul li {
+    background:none #343434;
+    border:1px solid #4f4f4f;
+    float:none;
+    height:29px;
+    margin:-1px 0 0;
+    padding:0 12px;
+    position:relative;
+    width:auto;
+    z-index:1000;
+}
+#menutop div ul li ul li:hover {
+    background:none #af0000;
+}
+#menutop div ul li ul li:hover {
+    left:0;
+    top:0;
+}
+#menutop div ul li ul li a {
+    color:#a5a5a5!important;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight: bold;
+    line-height:28px;
+    text-transform:none;
+}
+#menutop div ul li ul li.selected a, #menutop div ul li ul li a:hover {
+    color:#fff!important;
+}
+
+/*-----------------------------------------------------------*/
+
+/*------ MAIN UI ------*/
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #617f99;
+    clear: left;
+    text-align: center;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-attachment: fixed;
+    color: white;
+}
+
+div#id_container {
+    width: 99%;
+    margin: 50px auto;
+}
+
+div#id_left {
+    float: left;
+    max-width: 300px;
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    border-right: 2px solid gray;
+}
+
+div#id_left ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+div#id_left ul a {
+    text-decoration: none;
+}
+
+div#id_left a.button{
+    background-color: #617f99;
+    border:1px solid gray;
+    border-radius:5px;
+    color:#fff;
+    padding:10px 10px 10px 10px;
+    float:left;
+    min-width: 180px;
+    margin-bottom: 10px;
+}
+/*For left random new release bar*/
+#leftcol {
+    color: #f9f9f9;
+    overflow: hidden;
+    float: left;
+    max-width: 300px;
+    padding: 0 10px 20px 10px;
+    /*background-color: #E1DFA2;*/
+    background-color: rgba(255,255,255,0.2);
+}
+
+div#id_right {
+    margin-left: 220px;
+    border-left: 2px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+div#id_content {
+    padding: 1em;
+    overflow: hidden;
+    float: left;
+    clear: both;
+}
+
+/* --- topnav class -- */
+div.topnav {
+    float: left;
+    padding-right: 10px;
+    margin: auto;
+}
+
+div.topnav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+div.topnav ul a {
+    text-decoration: none;
+}
+
+div.topnav select {
+    width: 180px;
+}
+
+
+/*------ Movie Zone ------*/
+
+.car_card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 420px;
+    height:530px;
+    border-radius: 5px;
+    float: left;
+    margin: 10px;
+}
+
+.car_card .photo_container {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    float: right;
+}
+
+.car_card .photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.car_card .title {
+    color: white;
+    background-color: deepskyblue;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+.car_card .content {
+    font-size: 20px;
+    margin: 10px;
+}
+
+/*--------------Techzone-------------------------------*/
+#expert {
+    margin-bottom: 30px;
+}
+
+#expert_info {
+    float:right;
+    margin: 0 20px 30px 20px;
+}
+
+.articleBody {
+    padding-left: 10px;
+    margin: 0 auto;
+}
+
+.articleBody > p::first-letter {
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.shopTitle{
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.articleBody p {
+    line-height: 1.5em;
+}
+
+.references {
+    margin-top: 40px;
+    margin-bottom:40px;
+}
+/*-----------------------------------------------------*/
+
+/*-----------------Contact-Page------------------------*/
+#contactBlock {
+    line-height: 1.5em;
+    width: 500px;
+    margin: auto;
+}
+
+#contactBlock label {
+    float:left;
+    text-align: right;
+    width:100px;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactCentered {
+    text-align:center;
+    font-style:italic;
+}
+
+#map-canvas {
+    width: 550px;
+    height: 425px;
+    background-color: #CCC;
+    margin: 0 auto;
+}
+/*-----------------------------------------------------*/
+
+/* Following is for joinform only */
+
+#compnote p{
+    font-size: 16px;
+    margin-bottom: 3px;
+    text-align:right;
+    color:red;
+}
+
+.checkoutForm p, #joinform  p{
+    line-height: 1em;
+    margin-bottom: 0;
+}
+
+.checkoutForm fieldset, #joinform fieldset {
+    border: 2px solid #cc7708;
+    margin-bottom:20px;
+}
+
+.checkoutForm legend, #joinform legend {
+    font-style: italic;
+    font-weight: bold;
+    color: #cc7708;
+}
+
+.checkoutForm label, #joinform label{
+    float:left;
+    width: 130px;
+    display: block;
+    text-align: left;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+.checkoutForm input, #joinform input {
+    margin-top: 5px;
+}
+
+.checkoutForm select, #joinform select{
+    margin-top: 5px;
+}
+
+.requiredmarker {
+    font-size: 16px;
+    color:red;
+}
+
+.popup {
+    display: none;
+    background-color: #76B6A2;
+    padding: 0 8px 8px 8px;
+    color: black;
+}
+
+#formbuttons {
+    margin-left: 10px;
+    margin-bottom:20px;
+}
+/*-----------------------------------------------------*/
+
+/* following for login form (user & admin) only */
+
+#login fieldset {
+    border: 2px solid #cc7708;
+    margin-bottom:20px;
+}
+
+#login legend {
+    font-style: italic;
+    font-weight: bold;
+    color: #cc7708;
+}
+
+#login label{
+    float:left;
+    width: 130px;
+    display: block;
+    text-align: left;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+#login input {
+    margin-top: 5px;
+}
+.centre {
+    text-align: center;
+    color:#76B6A2;
+    font-weight:bold;
+}
+/*-----------------------------------------------------*/

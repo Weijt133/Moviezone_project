@@ -1,0 +1,48 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<script>
+function movieFilterChanged() {
+	alert('changed');
+}
+
+</script>
+</head>
+
+<body>
+<div>
+<div class='topnav'>
+<label for='id_actor'>Select actor:</label><br>
+<select name="actor" id="id_actor" onchange='movieFilterChanged();'>
+  <option value="all">Select all</option>
+  <option value="Aaron Eckhart">Aaron Eckhart</option>
+</select>
+</div>
+
+<div class='topnav'>
+<label for='id_director'>Select director:</label><br>
+<select name="director" id="id_director" onchange='movieFilterChanged();'>
+  <option value="all">Select all</option>
+  <option value="Alex Proyas">Alex Proyas</option>
+</select>
+</div>
+
+<div class='topnav'>
+<label for='id_genre'>Select genre:</label><br>
+<select name="genre" id="id_genre" onchange='movieFilterChanged();'>
+  <option value="all">Select all</option>
+  <option value="Action">Action</option>
+</select>
+</div>
+
+  <div class='topnav'>
+    <label for='id_classification'>Select classification:</label><br>
+    <select name="classification" id="id_classification" onchange='movieFilterChanged();'>
+      <option value="all">Select all</option>
+      <option value="G">G</option>
+    </select>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <title>Edit/Delete Member</title>
+</head>
+<body>
+
+<span style = "float:left; color:red; font-weight:bold;">Admin-mode</span><br><h1>Edit/Delete Member</h1>
+<form name='joineditform' id='joineditform' method='post' enctype='multipart/form-data'>
+    <input type='hidden' name='action' id='action' value='edit_member'>
+    <input type='hidden' name='updateid' id='updateid'>
+    <fieldset>
+        <legend >Member Detail: </legend>
+        <div>
+            <label>Surname:</label>
+            <input type='text' name='surname' id='surname' size='50' maxlength = '50' required>
+        </div>
+        <div>
+            <label>Other Names:</label>
+            <input type='text' name='othername' id='othername' size='50' maxlength = '60'required>
+        </div>
+        <div>
+            <label>Username:</label>
+            <input type='text' name='joinusername' id='joinusername' size='10' disabled>
+            <span style='color:red'>Can't be changed</span>
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type='text' name='userpass' id='userpass' size='10' >
+            <span style='color:red'>Must have upper/lower/digit/special characters (10 chars max)</span>
+        </div>
+        <div>
+            <label>Occupation:</label>
+            <select name='occupation' id='occupation'>
+                <option value="Student">Student</option>
+                <option value="Manager">Manager</option>
+                <option value="Healthcare">Medical worker</option>
+                <option value="Trades">Trades worker</option>
+                <option value="Educator">Education</option>
+                <option value="Technician">Technician</option>
+                <option value="Clerical">Clerical worker</option>
+                <option value="Retail">Retail worker</option>
+                <option value="Researcher">Researcher</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label>Join date:</label>
+            <input type='text' name='joindate' id='joindate' disabled>
+            <span style='color:red'>Can't be changed</span>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Contact details</legend>
+        <div>
+            <label>Contact method:</label>
+            <select name='contactmethod' id='contactmethod'>
+                <option value='email' >email</option>
+                <option value='landline' >landline</option>
+                <option value='mobile' >mobile</option>
+            </select></div>
+        <div>
+            <label>Email:</label>
+            <input type='text' name='email' id='email' size='50' maxlength = '50'>
+            <span style='color:red'>If chosen must be provided</span>
+        </div>
+        <div>
+            <label>Mobile:</label>
+            <input type='text' name='mobilenum' id='mobilenum' size='13' maxlength = '12'>
+            <span style='color:red'>Format 0[4 or 5]XX XXX XXX where X is a digit</span>
+        </div>
+        <div>
+            <label>Landline:</label>
+            <input type='text' name='phonenum' id='phonenum' size='13' maxlength = '13'>
+            <span style='color:red'>Format 0[2,3,6,7,8 or 9]XXXXXXXX where X is a digit</span>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Magazine</legend>
+        <div><input type='checkbox' name='magazine' id='magazine' value="1">&nbsp;&nbsp;Receive Magazine?
+        </div>
+        <div>
+            <label>Street address:</label>
+            <input type='text' name='streetaddr' id='streetaddr' size='50' maxlength = '50' >
+        </div>
+        <div>
+            <label>Suburb and State:</label>
+            <input type='text' name='suburbstate' id='suburbstate' size='50' maxlength = '50'>
+            <span style='color:red'>Format Suburb, State</span>
+        </div>
+        <div>
+            <label>Postcode:</label>
+            <input type='text' name='postcode' id='postcode' size='4' maxlength = '4'>
+            <span style='color:red'>Format four digits only</span></div>
+    </fieldset><div>
+    <input type='button' value='Update User' onclick="UpdateMemberSubmitClick();">
+</div>
+</form>
+<br>
+<form name='joindeleteform' id='joindeleteform' method='post' enctype='multipart/form-data'>
+    <div>
+        <input type='hidden' name='action' value='delete_member'>
+        <input type='hidden' name='deleteid' id='deleteid' >
+        <input type='hidden' name='user' id='user'>
+        <input type='button' value='Delete User' onclick="deleteMemberClick();">
+    </div>
+</form>
+
+</body>
+</html>

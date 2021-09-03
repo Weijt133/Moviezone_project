@@ -1,0 +1,127 @@
+/*------ MAIN UI ------*/
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: rgb(255, 204, 102);
+    clear: left;
+    text-align: center;
+}
+
+div#id_container {
+    width: 99%;
+	margin: 0 auto;
+}
+
+div#id_left {
+    float: left;
+    max-width: 220px;
+    margin: 0;
+    padding: 1em;
+	text-align: center;
+}
+
+div#id_left ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+div#id_left ul a {
+    text-decoration: none;
+}
+
+div#id_left a.button {
+ background-color: rgb(179, 134, 0);
+ border:1px solid gray;
+ border-radius:5px;
+ color:#fff;
+ padding:10px 10px 10px 10px;
+ float:left;
+ min-width: 180px;
+ margin-bottom: 10px;
+}
+
+div#id_left a.button_select {
+ background-color: #187099;
+ border:1px solid gray;
+ border-radius:5px;
+ color:#fff;
+ padding:10px 10px 10px 10px;
+ float:left;
+ min-width: 180px;
+ margin-bottom: 10px;
+}
+
+div#id_right {
+    margin-left: 220px;
+    border-left: 5px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+div#id_content {
+    padding: 1em;
+    overflow: hidden;
+	float: left;
+	clear: both;
+}
+
+/* --- topnav class -- */
+div.topnav {
+	float: left;
+	padding-right: 10px;
+    margin: auto;
+}
+
+div.topnav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+div.topnav ul a {
+    text-decoration: none;
+}
+
+div.topnav select {
+    width: 180px;
+}
+
+
+/*------ CAR CARD ------*/
+
+.car_card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 350px;
+    height: 700px;
+    border-radius: 5px;
+	float: left;
+	margin: 10px;
+	cursor:pointer;
+}
+
+.car_card .photo_container {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.car_card .photo {
+    width: 300px;
+	height: 200px;
+    border-radius: 50%;
+}
+
+.car_card .title {
+	color: white;
+	background-color: rgb(230, 172, 0);
+	font-size: 20px;
+	padding: 5px;
+	text-align: left;
+}
+
+.car_card .content {
+	font-size: 20px;
+	margin: 10px;
+}
+
+
+

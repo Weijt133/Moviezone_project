@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <title>Admin - The MoviesZone Emporium</title>
+</head>
+<body>
+
+<span style = "float:left; color:red; font-weight:bold;">Admin-mode</span><br>
+<div id = 'compnote'>
+    <p>* = Compulsory field</p>
+</div>
+<form calss="form" id='movieeditform' name='movieeditform' method='post' enctype='multipart/form-data'>
+    <input type='hidden' name='action' value='update_movie'>
+    <input type='hidden' id='movie_id' name='movie_id' value='30'>
+    <input type='hidden' id="title" name='title'>
+    <fieldset>
+        <legend>Movie Information:</legend>
+        <img style = "float:right;" id='thumbpath' name='thumbpath' class='moviePoster' alt='Movie poster' height='150' width='105'>
+        <div id ='movieidrow'>
+            <label for='movie_id'>Movie ID:</label>
+            <input type='text' id='movie1_id' name='movie1_id' size = '45' disabled>
+        </div>
+        <div id ='titlerow'>
+            <label for='title'>Title:</label>
+            <input type='text' id='title1' name='title1' size = '45' disabled>
+        </div>
+        <div id ='yearrow'>
+            <label for='year'>Year:</label>
+            <input type='text' id='year' name='year' size = '4' disabled>
+        </div>
+        <div id ='taglinerow'>
+            <label for='tagline'>Tag line:</label>
+            <input type='text' id='tagline' name='tagline' size = '60' disabled>
+        </div>
+    </fieldset>
+    <fieldset  id='stockfield'>
+        <legend>Stock Information:</legend>
+        <div>
+            <label for='rental_period'>Rental Period</label>
+            <select id='rental_period' name='rental_period'>
+                <option value='3 Day'>3 Day</option>
+                <option value='Weekly' selected>Weekly</option>
+                <option value='Overnight'>Overnight</option>
+            </select>
+            <span style = 'color:red;'> *</span>
+        </div>
+        <br>
+        <fieldset>
+            <legend>DVD:</legend>
+            <div id ='dvdrentalrow'>
+                <label for='dvdrental'>Rental price:</label>
+                <input type='text' id='dvdrental' name='dvdrental' size = '5' maxlength = '10'>
+                <span style = 'color:red;'>*</span>
+            </div>
+            <div id ='dvdpurchaserow'>
+                <label for='dvdpurchase'>Purchase price:</label>
+                <input type='text' id='dvdpurchase' name='dvdpurchase' size = '5' maxlength = '10'>
+                <span style = 'color:red;'>*</span>
+            </div>
+            <div id ='dvdstockrow'>
+                <label for='dvdstock'>In-stock:</label>
+                <input type='text' id='dvdstock' name='dvdstock' size = '5' maxlength = '10'>
+                <span style = 'color:red;'>*</span>
+            </div>
+            <div id ='dvdrentedrow'>
+                <label for='dvdrented'>Currently rented:</label>
+                <input type='text' id='dvdrented' name='dvdrented' size = '5' maxlength = '10'>
+                <span style = 'color:red;'> * Overwrite only if a rental has failed to be returned.</span>
+            </div>
+            <div id ='dvdshelfrow'>
+                <label for='dvdself'>In Store:</label>
+                <input type='text' id='dvdself' name='dvdself' size = '5' maxlength = '10' disabled>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>BluRay:</legend>
+            <div id ='blurentalrow'>
+                <label for='blurental'>Rental price:</label>
+                <input type='text' id='blurental' name='blurental' size = '5'>
+                <span style = 'color:red;'>*</span>
+            </div><div id ='blupurchaserow'>
+                <label for='blupurchase'>Purchase price:</label>
+                <input type='text' id='blupurchase' name='blupurchase' size = '5'>
+                <span style = 'color:red;'>*</span>
+            </div>
+            <div id ='blustockrow'>
+                <label for='blustock'>In-stock:</label>
+                <input type='text' id='blustock' name='blustock' size = '5' >
+                <span style = 'color:red;'>*</span>
+            </div>
+            <div id ='blurentedrow'>
+                <label for='blurented'>Currently rented:</label>
+                <input type='text' id='blurented' name='blurented' size = '5' >
+                <span style = 'color:red;'> * Overwrite only if a rental has failed to be returned.</span>
+            </div>
+            <div id ='blushelfrow'>
+                <label for='bluself'>In Store:</label>
+                <input type='text' id='bluself' name='bluself' size = '5' disabled>
+            </div>
+        </fieldset>
+    </fieldset>
+    <div>
+        <input type='button' value = 'Update Movie' onclick="UpdateMovieSubmitClick();">
+    </div>
+
+    <div>
+        <input type='hidden' name='action' value='delete_movie'>
+        <input type='hidden' name='id' value='30'>
+        <input type='hidden' name='movie' value="">
+        <input type='hidden' name='thumb' value=''>
+        <input type='button' value='Delete Movie' onclick="deleteMovieClick();">
+    </div>
+</form>
+
+</body>
+</html>

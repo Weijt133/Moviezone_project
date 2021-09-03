@@ -1,0 +1,133 @@
+<div class='clearfix'>		
+	<div id='id_error' style='color: red;'></div>		
+</div>	
+<h3>Add/Edit Movie</h3>
+<form name="movieaddform" method='POST' enctype='multipart/form-data'>
+	<input type='hidden' name='movie_id'>
+	<input type='hidden' name='thumbpath'>
+  <div class='form-container'>
+	  <h2>New movie:</h2>
+    <div id='id_form_right'>
+		<img class='photo' id='id_photo_frame' alt='movie photo' height='200' width='300'>
+		<p><label><b>Movie photo (240px x 320px) </b></label></p>
+		<input type='file' name='photo_loader' onchange='loadPhoto(this);'>
+
+	</div>
+    <div id='id_form_left'>
+		<label><b>Title</b></label>
+		<input type='text' placeholder='title of movie' name='title' id='title' required>
+		<label><b>Year</b></label>
+		<input type='number' placeholder='made year e.g. 2000' name='year' id='year' min='1900' max='2018' required>
+		<label><b>Tag line</b></label>
+		<input type='text' placeholder='Tag line of this movie' name='tagline' id='tagline' required>
+		<label><b>Plot:</b></label>
+		<textarea name='plot' id='plot' rows='4' cols='59' maxlength='256'required></textarea>
+		<label><b>Director</b></label>
+		<select name='director' id='director'>
+			<option value='none'>Select director</option>
+		</select>
+		<label><b>Or new director</b></label>
+		<input type='text' placeholder='New name of director e.g. Anthony Russo' name='director_namenew' id='director_namenew' autocomplete='off'>
+		<label><b>Studio</b></label>
+		<select name='studio' id='studio'>
+			<option value='none'>Select studio</option>
+		</select>
+		<label><b>Or new studio</b></label>
+		<input type='text' placeholder='New name of studio e.g. Marvel Studios' name='studio_namenew' id='studio_namenew' autocomplete='off'>
+		<label><b>Genre</b></label>
+		<select name='genre' id='genre'>
+			<option value='none'>Select genre</option>
+		</select>
+		<label><b>Or new genre</b></label>
+		<input type='text' placeholder='New name of genre e.g.Adventure, Thriller' name='genre_namenew' id='genre_namenew' autocomplete='off'>
+		<label><b>Classification</b></label>
+		<select name='classification' id='classification'>
+			<option value='none'>Select classification</option>
+		</select>
+		<label><b>Or new classification</b></label>
+		<input type='text' placeholder='New name of classification e.g.PG, M....' name='classification_namenew' id='classification_namenew' autocomplete='off'>
+
+	</div>
+  </div>
+
+	<div class='form-container'>
+		<h2>Movies Stars and Co-stars:</h2>
+		<label><b>First star:</b></label>
+		<select name='star1' id='star1'>
+			<option value='none'>Select first star</option>
+		</select>
+		<label><b>Or new star1:</b></label>
+		<input type='text' placeholder='New name of star1 e.g.Scarlett Johansson, Robert Redford....' name='star1_namenew' id='star1_namenew' autocomplete='off'>
+		<label><b>Second star:</b></label>
+		<select name='star2' id='star2'>
+			<option value='none'>Select second star</option>
+		</select>
+		<label><b>Or new star2:</b></label>
+		<input type='text' placeholder='New name of star2 e.g.Scarlett Johansson, Robert Redford....' name='star2_namenew' id='star2_namenew' autocomplete='off'>
+		<label><b>Third star:</b></label>
+		<select name='star3' id='star3'>
+			<option value='none'>Select third star</option>
+		</select>
+		<label><b>Or new star3:</b></label>
+		<input type='text' placeholder='New name of star3 e.g.Scarlett Johansson, Robert Redford....' name='star3_namenew' id='star3_namenew' autocomplete='off'>
+
+		<label><b>First costar:</b></label>
+		<select name='costar1' id='costar1'>
+			<option value='none'>Select first costar</option>
+		</select>
+		<label><b>Or new costar1:</b></label>
+		<input type='text' placeholder='New name of costar1 e.g.Kurt Russell, Michelle Rodriguez ....' name='costar1_namenew' id='costar1_namenew' autocomplete='off'>
+		<label><b>Second costar:</b></label>
+		<select name='costar2' id='costar2'>
+			<option value='none'>Select second costar</option>
+		</select>
+		<label><b>Or new costar2:</b></label>
+		<input type='text' placeholder='New name of costar2 e.g.Kurt Russell, Michelle Rodriguez ....' name='costar2_namenew' id='costar2_namenew' autocomplete='off'>
+		<label><b>Third costar:</b></label>
+		<select name='costar3' id='costar3'>
+			<option value='none'>Select third costar</option>
+		</select>
+		<label><b>Or new costar3:</b></label>
+		<input type='text' placeholder='New name of costar3 e.g.Kurt Russell, Michelle Rodriguez ....' name='costar3_namenew' id='costar3_namenew' autocomplete='off'>
+
+	</div>
+
+	<div class='form-container'>
+		<h2>Stock Information:</h2>
+
+		<label><b>Rental Period:</b></label>
+		<select name='rental_period' id='rental_period'>
+			<option value='none'>Select period</option>
+		</select>
+
+		<div class='form-container'>
+			<h2>DVD:</h2>
+			<label><b>Rental price:</b></label>
+			<input type='number' step="0.01" placeholder='price e.g. 5.00' name='DVD_rental_price' id='DVD_rental_price' min='0' max='5000000' required>
+			<label><b>Purchase price:</b></label>
+			<input type='number' step="0.01" placeholder='price e.g. 3.00' name='DVD_purchase_price' id='DVD_purchase_price' min='0' max='5000000' required>
+			<label><b>In-stock:</b></label>
+			<input type='number' placeholder='The number of DVD in stock e.g. 10' name='numDVD' id='numDVD' min='0' max='1000000' required>
+			<label><b>Rented:</b></label>
+			<input type='number' placeholder='Overwrite only if some rented before system entry.' name='numDVDout' id='numDVDout' min='0' max='1000000' required>
+
+		</div>
+
+		<div class='form-container'>
+			<h2>BluRay:</h2>
+			<label><b>Rental price:</b></label>
+			<input type='number' step="0.01" placeholder='price e.g. 5.00' name='BluRay_rental_price' id='BluRay_rental_price' min='0' max='5000000' required>
+			<label><b>Purchase price:</b></label>
+			<input type='number' step="0.01" placeholder='price e.g. 3.00' name='BluRay_purchase_price' id='BluRay_purchase_price' min='0' max='5000000' required>
+			<label><b>In-stock:</b></label>
+			<input type='number' placeholder='The number of DVD in stock e.g. 10' name='numBluRay' id='numBluRay' min='0' max='1000000' required>
+			<label><b>Rented:</b></label>
+			<input type='number' placeholder='Overwrite only if some rented before system entry.' name='numBluRayOut' id='numBluRayOut' min='0' max='1000000' required>
+
+		</div>
+		<div style='text-align: center; padding-top: 30px;'>
+			<button type='button' name = 'btnSubmit' class='button'>Submit</button>
+			<button type='button' name = 'btnExit' class='button'>Exit</button>
+		</div>
+	</div>
+</form>

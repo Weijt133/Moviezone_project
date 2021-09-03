@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - DVD Emporium</title>
+    <!--
+      Google maps integration based on:
+      https://developers.google.com/maps/tutorials/fundamentals/adding-a-google-map
+   -->
+    <script type = "text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type = "text/javascript">
+        function initialize() {
+            var myLatLng = new google.maps.LatLng (-28.168, 153.518);
+            var mapCanvas = document.getElementById('map-canvas');
+            var mapOptions = {
+                center: myLatLng,
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map});
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+</head>
+<body>
+
+<h2>Contact Info for DVD Emporium</h2>
+<img class="center"src = "img/dvd_emporium.jpg" width = "410" height = "135"
+     alt = "Our extensive collection" title="Our extensive collection">
+<p class="contactCentered">Come on down and view our collection</p>
+<div id="contactBlock">
+    <label>Phone:</label> (07) 1234-5678<br>
+    <label>Address:</label> Southern Cross Drive<br>
+    <label>&nbsp;</label>Bilinga, Queensland 4225<br>
+    <label>Email:</label><a href="mailto:info@DVD-Emporium.com.au?subject=Direct from DVD Emporium website">
+    info@DVD-Emporium.com.au</a><br>
+</div>
+<h2>DVD Emporium location (Google Map)<h2>
+    <div id="map-canvas">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.2506285157206!2d151.20736901480717!3d-33.883198527236864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae69dcaea8ef%3A0xa126f4f7ec848df6!2sSouthern+Cross+University%2C+Sydney+Campus!5e0!3m2!1szh-TW!2sau!4v1536991725350" width="550" height="425" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>

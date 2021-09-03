@@ -1,0 +1,214 @@
+/* Add padding to container elements */
+.form-container {
+   width: 80%;
+   height: auto;
+   overflow: auto;
+   padding: 15px;
+   border:3px solid #ccc;
+}
+
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=number], 
+.form-container input[type=file],
+.form-container select
+ {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	font-size: 16px;
+}
+
+.form-container #id_body, 
+.form-container #id_make {
+	background-image: url('../img/search_icon_32.png');
+    background-position: 8px 8px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+/* Set a style for all buttons */
+.form-container button {
+	padding: 10px 60px;
+	margin: auto;
+	font-size: 18px;
+	font-weight: bold;
+/*
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 45%;
+*/	
+}
+
+/* The container <div> - needed to position the dropdown content */
+.filter_box {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.filter-content {
+    display: block;
+	top: -20px;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.filter-content a {
+    color: black;
+	font-family: Sans-serif;
+	font-size: 16px;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.filter-content a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/*Importantt: the right block should come first in html*/
+.form-container #id_form_right {
+	margin: 25px 0px 10px 15px;
+	float: right;
+	width: 200 px;
+}
+
+.form-container #id_form_left {
+    float: none; /* not needed, just for clarification */    
+    /* the next props are meant to keep this block independent from the other floated one */
+    width: auto;
+    overflow: hidden;
+}
+
+.form-container .photo {
+	border:2px solid #ccc;
+	background-image: url('../img/default_movie_photo.jpg');
+    background-position: 30px 0px; 
+    background-repeat: no-repeat;	
+}
+
+/* Clear floats */
+.form-container .clearfix::after {	
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+}
+
+/* Following is for joineditform only */
+
+#compnote p{
+    font-size: 16px;
+    margin-bottom: 3px;
+    text-align:right;
+    color:red;
+}
+
+#joinform, #joineditform{
+    min-width: 900px;
+}
+
+#joinform p, #joineditform  p{
+    line-height: 1em;
+    margin-bottom: 0;
+}
+
+#joinform fieldset, #joineditform fieldset {
+    border: 2px solid #cc7708;
+    margin-bottom:20px;
+}
+
+#joinform legend, #joineditform legend {
+    font-style: italic;
+    font-weight: bold;
+    color: #cc7708;
+}
+
+#joinform label, #joineditform label{
+    float:left;
+    width: 130px;
+    display: block;
+    text-align: left;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+#joinform input, #joineditform input {
+    margin-top: 5px;
+}
+
+#joinform select, #joineditform select{
+    margin-top: 5px;
+}
+
+.requiredmarker {
+    font-size: 16px;
+    color:red;
+}
+
+.popup {
+    display: none;
+    background-color: #76B6A2;
+    padding: 0 8px 8px 8px;
+    color: black;
+}
+
+#formbuttons {
+    margin-left: 10px;
+    margin-bottom:20px;
+}
+
+/*    the following is for form class*/
+#movieeditform{
+    min-width: 900px;
+}
+
+#movieeditform  p{
+    line-height: 1em;
+    margin-bottom: 0;
+}
+
+#movieeditform fieldset {
+    border: 2px solid #cc7708;
+    margin-bottom:20px;
+}
+
+#movieeditform legend {
+    font-style: italic;
+    font-weight: bold;
+    color: #cc7708;
+}
+
+#movieeditform label{
+    float:left;
+    width: 130px;
+    display: block;
+    text-align: left;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+#movieeditform input {
+    margin-top: 5px;
+}
+
+#movieeditform select{
+    margin-top: 5px;
+}
